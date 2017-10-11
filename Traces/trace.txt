@@ -1,0 +1,68 @@
+B-CPE-100 cpoolday05
+
+
+Advanced tests
+
+  01 - day05 - 8 tests
+    01 - task01: KO
+      Test failure: The output must match the regular expression '^OK$', but it was 'KO: Build failed.'
+    02 - task02: KO
+      Test failure: The output must match the regular expression '^OK$', but it was 'KO: previous task failed'
+    03 - task03: KO
+      Test failure: The output must match the regular expression '^OK$', but it was 'KO: previous task failed'
+    04 - task04: KO
+      Test failure: The output must match the regular expression '^OK$', but it was 'KO: previous task failed'
+    05 - task05: KO
+      Test failure: The output must match the regular expression '^OK$', but it was 'KO: previous task failed'
+    06 - task06: KO
+      Test failure: The output must match the regular expression '^OK$', but it was 'KO: previous task failed'
+    07 - task07: KO
+      Test failure: The output must match the regular expression '^OK$', but it was 'KO: previous task failed'
+    08 - task08: KO
+      Test failure: The output must match the regular expression '^OK$', but it was 'KO: previous task failed'
+  
+
+
+
+=== TEST LOGS ===
+
+====================
+ task01
+====================
+
+# Building...
+~/.> gcc -fno-builtin -W -Wall -o my_compute_factorial_it test_files/my_putchar.c test_files/minilib.c test_files/day05/task01.c *.c
+my_compute_power_it.c: In function ‘my_compute_power_it’:
+my_compute_power_it.c:13:11: error: ‘n’ undeclared (first use in this function)
+   return (n);
+           ^
+my_compute_power_it.c:13:11: note: each undeclared identifier is reported only once for each function it appears in
+my_find_prime_sup.c: In function ‘my_find_next_prime’:
+my_find_prime_sup.c:26:15: error: ‘i’ undeclared (first use in this function)
+  if (is_prime(i))
+               ^
+my_find_prime_sup.c:26:15: note: each undeclared identifier is reported only once for each function it appears in
+
+
+=== CODING STYLE ===
+
+G1 rule has been violated 1 times: you must start your source code with a correctly formatted Epitech standard header
+O4 rule has been violated 2 times: your file name must follow the snake_case convention, be clear, precise, explicit, and unambiguous
+implicit_F002 rule has been violated 1 times: invalid filename or directory
+implicit_L001 rule has been violated 3 times: trailing space
+F3 rule has been violated 3 times: too long line
+implicit_L003 rule has been violated 2 times: leading or trailing empty lines
+L2 rule has been violated 1 times: bad indentation on start of a line
+
+
+------------------------------------------------------------------------------
+                           GCC Code Coverage Report
+Directory: /tmp/tmp_delivery
+------------------------------------------------------------------------------
+File                                       Lines    Exec  Cover   Missing
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+TOTAL                                          0       0    --%
+------------------------------------------------------------------------------
+lines: 0.0% (0 out of 0)
+branches: 0.0% (0 out of 0)
