@@ -1,0 +1,104 @@
+/*
+** EPITECH PROJECT, 2017
+** my_find_prime_sup.c
+** File description:
+** Return the first prime number greater or equal to the int passed as an argument
+*/
+
+#include <criterion/criterion.h>
+#define INT_MAX 2147483647
+
+int my_find_next_prime(int nb);
+
+TestSuite(FindPrimeSup, .timeout = 2);
+
+Test(FindPrimeSup, Test1) {
+	int i = 1;
+	
+	cr_assert(my_find_next_prime(i) == 3,
+		  "Test for i = %d return %d instead of 3", i, my_find_next_prime(i));
+}
+
+Test(FindPrimeSup, Test2) {
+	int i = 2;
+	
+	cr_assert(my_find_next_prime(i) == 3,
+		  "Test for i = %d return %d instead of 3", i, my_find_next_prime(i));
+}
+
+Test(FindPrimeSup, Test3) {
+	int i = 3;
+	
+	cr_assert(my_find_next_prime(i) == 3,
+		  "Test for i = %d return %d instead of 3", i, my_find_next_prime(i));
+}
+
+Test(FindPrimeSup, Test4) {
+	int i = 4;
+	
+	cr_assert(my_find_next_prime(i) == 5,
+		  "Test for i = %d return %d instead of 3", i, my_find_next_prime(i));
+}
+
+Test(FindPrimeSup, Test5) {
+	int i = 8;
+	int ri = 11;
+
+	cr_assert(my_find_next_prime(i) == ri,
+		  "Test for i = %d return %d instead of %d",
+		  i, my_find_next_prime(i),ri);
+}
+
+Test(FindPrimeSup, Test50) {
+	int i = INT_MAX;
+	int ri = INT_MAX;
+
+	cr_assert(my_find_next_prime(i) == ri,
+		  "Test for i = %d return %d instead of %d",
+		  i, my_find_next_prime(i),ri);
+}
+
+Test(FindPrimeSup, Test51) {
+	int i = 98;
+	int ri = 127;
+
+	cr_assert(my_find_next_prime(i) == ri,
+		  "Test for i = %d return %d instead of %d",
+		  i, my_find_next_prime(i),ri);
+}
+
+Test(FindPrimeSup, Test6) {
+	int i = 12;
+	int ri = 13;
+
+	cr_assert(my_find_next_prime(i) == ri,
+		  "Test for i = %d return %d instead of %d",
+		  i, my_find_next_prime(i),ri);
+}
+
+Test(FindPrimeSup, Test7) {
+	int i = 14;
+	int ri = 17;
+
+	cr_assert(my_find_next_prime(i) == ri,
+		  "Test for i = %d return %d instead of %d",
+		  i, my_find_next_prime(i),ri);
+}
+
+Test(FindPrimeSup, Test8) {
+	int i = 31;
+	int ri = 31;
+
+	cr_assert(my_find_next_prime(i) == ri,
+		  "Test for i = %d return %d instead of %d",
+		  i, my_find_next_prime(i),ri);
+}
+
+Test(FindPrimeSup, Test9) {
+	int i = INT_MAX - 10;
+	int ri = INT_MAX;
+
+	cr_assert(my_find_next_prime(i) == ri,
+		  "Test for i = %d return %d instead of %d",
+		  i, my_find_next_prime(i),ri);
+}

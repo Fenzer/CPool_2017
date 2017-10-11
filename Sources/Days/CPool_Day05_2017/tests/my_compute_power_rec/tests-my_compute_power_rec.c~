@@ -1,0 +1,92 @@
+/*
+** EPITECH PROJECT, 2017
+** tests-my_compute_power_rec.c
+** File description:
+** Criterion tests for my iterative algo that compute power.
+*/
+
+#include<criterion/criterion.h>
+#include<math.h>
+
+int my_compute_power_rec(int nb, int p);
+
+TestSuite(Power_Rec, .timeout=2);
+
+Test(Power_Rec, Test1, .timeout=2)
+{
+	int nb = 3;
+	int pow = 5;
+	int nb_expow = 243;
+
+	cr_assert_eq(my_compute_power_rec(nb,pow),nb_expow,
+		    "\nMy Function return : %d\n When it should return : %d",
+		     my_compute_power_rec(nb,pow),nb_expow);
+}
+
+Test(Power_Rec, Test2, .timeout=2)
+{
+	int nb = 6;
+	int pow = 8;
+	int nb_expow = 1679616;
+
+	cr_assert_eq(my_compute_power_rec(nb,pow),nb_expow,
+		    "\nMy Function return : %d\n When it should return : %d",
+		     my_compute_power_rec(nb,pow),nb_expow);
+}
+
+Test(Power_Rec, Test3, .timeout=2)
+{
+	int nb = -6;
+	int pow = 8;
+	int nb_expow = 1679616;
+
+	cr_assert_eq(my_compute_power_rec(nb,pow),nb_expow,
+		    "\nMy Function return : %d\n When it should return : %d",
+		     my_compute_power_rec(nb,pow),nb_expow);
+}
+
+Test(Power_Rec, Test3b, .timeout=2)
+{
+	int nb = -6;
+	int pow = 7;
+	int nb_expow = -279936;
+
+	cr_assert_eq(my_compute_power_rec(nb,pow),nb_expow,
+		    "\nMy Function return : %d\n When it should return : %d",
+		     my_compute_power_rec(nb,pow),nb_expow);
+}
+
+
+Test(Power_Rec, Test4, .timeout=2)
+{
+	int nb = 6;
+	int pow = -8;
+	int nb_expow = 0;
+
+	cr_assert_eq(my_compute_power_rec(nb,pow),nb_expow,
+		    "\nMy Function return : %d\n When it should return : %d",
+		     my_compute_power_rec(nb,pow),nb_expow);
+}
+
+Test(Power_Rec, Test5, .timeout=2)
+{
+	int nb = 10;
+	int pow = 8;
+	int nb_expow = 100000000;
+
+	cr_assert_eq(my_compute_power_rec(nb,pow),nb_expow,
+		    "\nMy Function return : %d\n When it should return : %d",
+		     my_compute_power_rec(nb,pow),nb_expow);
+}
+
+Test(Power_Rec, Test6, .timeout=2)
+{
+	int nb = 8;
+	int pow = 12;
+	int nb_expow = 68719476736;
+
+	cr_assert_eq(my_compute_power_rec(nb,pow),nb_expow,
+		    "\nMy Function return : %d\n When it should return : %d",
+		     my_compute_power_rec(nb,pow),nb_expow);
+}
+

@@ -1,0 +1,69 @@
+/*
+** EPITECH PROJECT, 2017
+** tests-my_strcpy.c
+** File description:
+** Main to test my_strcpy.
+*/
+
+
+
+char *my_strcpy(char *dest, char const *src);
+
+int main(int ac, char **av)
+{
+	if (ac > 2) {
+		my_putstr("==> Before Copy <==\n");
+		my_putstr("Dest : ");
+		my_putstr(av[1]);
+		my_putchar('\n');
+		my_putstr("Src : ");
+		my_putstr(av[2]);
+		my_strcpy(av[1], av[2]);
+		my_putchar('\n');
+		my_putstr("==> After Copy <==\n");
+		my_putstr("Dest : ");
+		my_putstr(av[1]);
+		my_putchar('\n');
+		my_putstr("Src : ");
+		my_putstr(av[2]);
+		my_putstr("\n==> Before Official Copy <==\n");
+		my_putstr("Dest : ");
+		my_putstr(av[1]);
+		my_putchar('\n');
+		my_putstr("Src : ");
+		my_putstr(av[3]);
+		strcpy(av[1], av[3]);
+		my_putchar('\n');
+		my_putstr("==> After Official Copy <==\n");
+		my_putstr("Dest : ");
+		my_putstr(av[1]);
+		my_putchar('\n');
+		my_putstr("Src : ");
+		my_putstr(av[3]);
+
+	}
+
+	
+	return (0);
+}
+
+char *
+strcpy(char *s1, const char *s2)
+{
+    char *s = s1;
+    while ((*s++ = *s2++) != 0)
+	;
+    return (s1);
+}
+
+char *my_strcpy(char *dest, char const *src)
+{
+	char *s = dest
+		while ((*dest++ = ) {
+		if (src[i])
+			dest[i] = src[i];
+		else
+			dest[i] = '\0';
+	}
+	return (dest);
+}
